@@ -1,5 +1,15 @@
 # Úkol 1 - Kreslení (ASCII art)
 
+
+| Termín odevzdání | 18.03.2022 23:59 AoE                         |
+|------------------|----------------------------------------------|
+| Povinné zadání   | 2b kontrola Coding stylu                     |
+| Volitelné zadání | není                                         |
+| Bonusové zadání  | není                                         |
+| Počet uploadů    | 10                                           |
+| Výchozí soubory  | [b3b36prg-hw01.zip](files/b3b36prg-hw01.zip) |
+
+
 > [!TIP]
 > Tato úloha slouží k procvičení vnořených cyklů a dekompozici programu na funkce. Není potřeba používat pole.
 
@@ -80,7 +90,14 @@ Příklad 7 - pub07-m
 > [!TIP]
 > Ve výpisu domečku dbejte na bíle znaky (mezery), platný znak obrázku je zakončem symbolem nového řádku ('\n'). I znaky, které nejsou na první pohled viditelné jsou znaky, proto pro kontrolu můžete uložit standardní výstup programu do souboru a zobrazit jej v hexadecimálním tvaru například příkazem hexdump -C a porovnat s přiloženými vzorovými výstupy. Věnujte pozornost Testování HW programů před odevzdáním.
 
-
+|                            | Povinné zadání                         |
+|----------------------------|----------------------------------------|
+| Název v BRUTE              | HW01                                   |
+| Odevzdávané soubory        | main.c                                 |
+| Argumenty při spuštění     | žádné                                  |
+| Kompilace pomocí           | clang -pedantic -Wall -Werror -std=c99 |
+| Očekávaná časová složitost | O(n⋅m), resp. O(n⋅m+p⋅p)               |
+| Procvičované oblasti       | použití vnořených cyklů                |
 
 
 

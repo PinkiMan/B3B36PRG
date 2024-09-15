@@ -1,5 +1,12 @@
 # Úkol 2 - Prvočíselný rozklad
 
+| Termín odevzdání | 25.03.2023 23:59 AoE                                                                             |
+|------------------|--------------------------------------------------------------------------------------------------|
+| Povinné zadání   | 2b kontrola Coding Stylu                                                                         |
+| Volitelné zadání | není                                                                                             |
+| Bonusové zadání  | 4b 26.05.2023 23:59 CEST                                                                         |
+| Počet uploadů    | 20                                                                                               |
+| Výchozí soubory  | [b3b36prg-hw02.zip](files/b3b36prg-hw02.zip)<br>[b3b36prg-hw02b.zip](files/b3b36prg-hw02b.zip)   |
 
 
 Implementujte program, který načte ze standardního vstupu seznam celých kladných čísel zakončený nulou a provede jejich prvočíselný rozklad. Vstupní čísla jsou na jednotlivých řádcích. Číslo 1 je speciální případ vstupu, při kterém vypište 1 jako “prvočíselný rozklad”.
@@ -35,19 +42,19 @@ Příklad 4 - pub04-m
 
 ## Povinné zadání
 
-Na vstupu jsou pouze celá čísla, která jsou reprezentovatelná pomocí 64-bitového celočíselného znaménkového typu. Vzhledem k náročnosti úkolu předpokládáme, že největší číslo v prvočíselném rozkladu je menší než 10^6. Aby byl váš algoritmus efektivní pro opakovaná volání, tak si předpočítejte tabulku všech prvočísel do hodnoty 10^6 algoritmem Eratosthenovo síto. Následně je možné zkoušet dělení pouze nalezenými prvočísly a významně tak výpočet urychlit.
+Na vstupu jsou pouze celá čísla, která jsou reprezentovatelná pomocí 64-bitového celočíselného znaménkového typu. Vzhledem k náročnosti úkolu předpokládáme, že největší číslo v prvočíselném rozkladu je menší než 10^6. Aby byl váš algoritmus efektivní pro opakovaná volání, tak si předpočítejte tabulku všech prvočísel do hodnoty 10^6 algoritmem [Eratosthenovo síto](https://cs.wikipedia.org/wiki/Eratosthenovo_s%C3%ADto). Následně je možné zkoušet dělení pouze nalezenými prvočísly a významně tak výpočet urychlit.
 
 Doporučení: Pro uložení nalezených prvočísel používejte “pouze” 32-bitový celočíselný znaménkový typ.
 
 ## Příklad časové náročnosti
 
-Rychlost vašecho programu pro volitelnou část můžete testovat například na rozkladu číselné řady od 1 do N. Výpočetní časy různých verzí programu spuštěných na standardním počítači1) a zkompilovaných se zapnutou optimalizací (-O3) jsou zaznamenány v následující tabulce. Pro představu jsme otestovali i instance opt01 až opt03 z odevzdávacího systému. V přepočtu na rychlost počítače v odevzdávacím systému odpovídá časový limit přibližně 1.8 až 2 s pro volitelné úlohy opt*.
+Rychlost vašecho programu pro volitelnou část můžete testovat například na rozkladu číselné řady od 1 do N. Výpočetní časy různých verzí programu spuštěných na standardním počítači [^1] a zkompilovaných se zapnutou optimalizací (-O3) jsou zaznamenány v následující tabulce. Pro představu jsme otestovali i instance opt01 až opt03 z odevzdávacího systému. V přepočtu na rychlost počítače v odevzdávacím systému odpovídá časový limit přibližně 1.8 až 2 s pro volitelné úlohy opt*.
 
-| Řešení / Vstupní soubor | 1-10000 | 1-50000 | 1-100000 | opt01  | opt02  | opt03  |
-|-------------------------|---------|---------|----------|--------|--------|--------|
-| Naivní I                | 0.18 s  | 3.0 s   | 11.6 s   | 4.6 s  | DNF 2) | DNF 3) |
-| Naivní II               | 0.16 s  | 2.3 s   | 8.8 s    | 4.3 s  | 4.4 s  | 4.6 s  |
-| Referenční              | 0.04 s  | 0.3 s   | 1.1 s    | 0.4 s  | 0.4 s  | 0.4 s  |
+| Řešení / Vstupní soubor | 1-10000 | 1-50000 | 1-100000 | opt01  | opt02    | opt03    |
+|-------------------------|---------|---------|----------|--------|----------|----------|
+| Naivní I                | 0.18 s  | 3.0 s   | 11.6 s   | 4.6 s  | DNF [^2] | DNF [^3] |
+| Naivní II               | 0.16 s  | 2.3 s   | 8.8 s    | 4.3 s  | 4.4 s    | 4.6 s    |
+| Referenční              | 0.04 s  | 0.3 s   | 1.1 s    | 0.4 s  | 0.4 s    | 0.4 s    |
 
 
 ## Naivní řešení I
@@ -76,7 +83,7 @@ Využívá předpočítaná prvočísla do hodnoty 10^6. Algoritmus končí, kdy
 Na vstupu bonusového zadání mohou být celá kladná čísla dlouhá až 100 cifer. Je tedy nutné vytvořit jejich vlastní reprezentaci v počítači spolu s příslušnými operacemi celočíselného dělení se zbytkem. Největší číslo v prvočíselném rozkladu bude vždy menší než 10^6. Při implementaci nepoužívejte cízí kód ani žádnou specializovanou knihovnu pro práci s velkými čísly. V tomto úkolu nemusíte používat Eratostenovo síto, protože časový limit nebude nijak přísný. Cílem je především práce s velkými čísly.
 
 Příklad 5 - pub01-b
-Rozkládané číslo4) je (995663∗995669)^8:
+Rozkládané číslo [^4] je (995663∗995669)^8:
 
 
 | Vstup  | <pre>932865073719992059629773513614789388266580305083920591925740371392254317064584855785088915745761<br />0</pre>                                                 |
@@ -99,3 +106,19 @@ sys     0m0.004s
 > U tohoto domácího úkolu je linkována matematická knihovna <math.h> a to přepínačem -lm.
 
 
+|                            | Povinné zadání                                 | Bonusové zadání                                |
+|----------------------------|------------------------------------------------|------------------------------------------------|
+| Název v BRUTE              | HW02                                           | HW02B                                          |    
+| Odevzdávané soubory        | main.c, *.h [^5]                               | main.c, *.h [^5]                               |
+| Argumenty při spuštění     | žádné                                          | žádné                                          |
+| Kompilace pomocí           | clang -pedantic -Wall -Werror -std=c99 -O3 -lm | clang -pedantic -Wall -Werror -std=c99 -O3 -lm |
+| Očekávaná časová složitost | ≈O(v/logv)                                     | ≈O(v/logv)                                     |
+| Procvičované oblasti       | pole                                           | pole                                           |
+
+
+[^1]: Notebook, Intel Core i5 CPU M480 @ 2.67 GHz, 8GB RAM DDR3 1066 MHz.
+[^2]: Více než 10 minut.
+[^3]: Více než 10 minut.
+[^4]: Je možné si ověřit na [Wolfram Alpha - výpočet](https://www.wolframalpha.com/input?i=%28995663+*+995669%29%5E8).
+[^5]: Jeden soubor main.c může používat více hlavičkových souborů. Nevytvářejte žádné složky.
+[^6]: Rozklad jednoho vstupního čísla v závislosti na jeho velikosti v. Časová složitost u volitelné části je dána počtem prvočísel do zadané hodnoty v ([Prime number](https://en.wikipedia.org/wiki/Prime_number)).
