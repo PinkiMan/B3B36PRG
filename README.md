@@ -9,8 +9,8 @@
 - [HW_3](homeworks/hw_3) - Testovací úloha ([zadání](homeworks/hw_3/hw_3.md)/[řešení](homeworks/hw_3/main.c))
 - [HW_4](homeworks/hw_4) - Testovací úloha ([zadání](homeworks/hw_4/hw_4.md)/[řešení](homeworks/hw_4/grep.c))
 - [HW_5](homeworks/hw_5) - Testovací úloha ([zadání](homeworks/hw_5/hw_5.md)/[řešení](homeworks/hw_5/main.c))
-- [HW_0](homeworks/hw_6) - Testovací úloha ([zadání](homeworks/hw_6/hw_6.md)/[řešení](homeworks/hw_6/queue.c))
-- [HW_0](homeworks/hw_7) - Testovací úloha ([zadání](homeworks/hw_7/hw_7.md)/[řešení](homeworks/hw_7/linked_list.c))
+- [HW_6](homeworks/hw_6) - Testovací úloha ([zadání](homeworks/hw_6/hw_6.md)/[řešení](homeworks/hw_6/queue.c))
+- [HW_7](homeworks/hw_7) - Testovací úloha ([zadání](homeworks/hw_7/hw_7.md)/[řešení](homeworks/hw_7/linked_list.c))
 
 
 
